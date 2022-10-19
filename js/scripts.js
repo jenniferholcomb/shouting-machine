@@ -8,9 +8,11 @@ function getAndSetShoutingMachineValues() { // aka getandSetMadLibsVal()
   // intake from user GET
   const shoutingInput = document.getElementById("user-input").value;
   // display back to user SET
-  document.querySelector("span#shout").innerText= shoutingInput;
+  document.querySelector("div#shout-display-response").innerText= shoutingInput;
+  // changes to upper case
   const shoutUpper = shoutingInput.toUpperCase();
-  console.log("const shoutingInput & shoutUppper: ", shoutingInput, shoutUpper);
+  document.querySelector("div#shout-display-response").innerText= shoutUpper;
+  console.log("const shoutingInput(prior to upper changes) & shoutUppper: ", shoutingInput, shoutUpper);
 }
 
 // this function creates the onsubmit event handler
